@@ -5,14 +5,24 @@ jQuery(document).ready(function($){
     // $('select').niceSelect();
 
     // homepage-slides
-	// $(".homepage-slides").owlCarousel({
-	// 	items: 1,
-	// 	loop: true,
-	// 	nav: true,
-	// 	dots: false,
-    //     autoplay: false,
-    //     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-	// });
+	$(".homepage-slides").owlCarousel({
+		items: 1,
+		loop: true,
+		nav: true,
+		dots: true,
+        autoplay: false,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+    });
+    
+    // testimonial-wrap
+	$(".testimonial-wrap").owlCarousel({
+		items: 1,
+		loop: true,
+		nav: false,
+		dots: true,
+        autoplay: false,
+        autoHeight: true,
+	});
 
     
 

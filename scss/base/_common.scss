@@ -4,10 +4,11 @@ body {
     font-family: $body-font;
     font-size: $body-font-size;
     color: $body-color;
+    line-height: $body-line-height;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 15px;
-    font-weight: 600;
+    font-weight: 700;
 }
 p {
     &:last-child{
@@ -27,10 +28,10 @@ input[type=text], input[type=email], input[type=password], input[type=tel], inpu
     .form-control{
         &:focus {
             box-shadow: none;
-            border-color: #2a7d2e;
+            border-color: #115aaf;
         }
         &:hover {
-            border-color: #2a7d2e;
+            border-color: #115aaf;
         }
     }
 }
@@ -55,33 +56,59 @@ textarea {
     border-color: #ced4da;
     transition: all .3s ease;
     &:focus {
-        border-color: #2a7d2e;
+        border-color: #115aaf;
     }
     &:hover {
-        border-color: #2a7d2e;
+        border-color: #115aaf;
     }
 }
 
 /*========.section-title=========*/ 
 .section-title {
-    font-size: 38px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #124a2f;
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #12202d;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 25px;
+    &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10px;
+        height: 100%;
+        background-color: #115AAF;
+        content: "";
+        border-radius: 5px;
+    }
+    h2 {
+        margin: 0 0 4px;
+        text-transform: capitalize;
+        color: #115AAF;
+        font-size: 38px;
+        line-height: 38px;
+        span{
+            color: #031a39;
+        }
+    }
+}
+
+.section-padding{
+    padding: 60px 0;
 }
 
 /*======.owl-dots customization=======*/
 .owl-dots {
     text-align: center;
     div {
-        height: 5px;
-        width: 5px;
-        background-color: #BBBBBB;
+        height: 15px;
+        width: 15px;
+        background-color: #7F8794;
         display: inline-block;
-        margin: 0 5px;
+        margin: 0 3px;
         border-radius: 50%;
         &.active {
-            background-color: #0DA0F4;
+            background-color: #115aaf;
         }
     }
 }
@@ -90,9 +117,9 @@ textarea {
 .owl-nav div {
     @extend %displayinline;
     @extend %posabsolute;
-    left: -10px;
+    left: 2%;
     top: 50%;
-    color: #2A7D2E;
+    color: #090A0C;
     background-color: #fff;
     line-height: 60px;
     margin-top: -30px;
@@ -105,19 +132,19 @@ textarea {
     @extend %basetransition;
     &.owl-next {
         left: auto;
-        right: -10px;
+        right: 2%;
         padding-left: 5px;
         padding-right: 0;
     }
     &:hover {
         color: #ffffff;
-        background-color: #2A7D2E;
+        background-color: #115aaf;
     }
 }
 
 select {
     font-size: 19px;
-    color: #0da0f4;
+    color: #115aaf;
     background-color: #fff;
     padding: 8px 10px;
 }
@@ -136,10 +163,10 @@ select {
         border: 1px solid #ced4da;
     }
     &:focus {
-        border-color: #154D32;
+        border-color: #115aaf;
     }
     &:hover {
-        border-color: #154D32;
+        border-color: #115aaf;
     }
     &:after{
         right: 25px;
@@ -149,7 +176,7 @@ select {
         margin-top: -6px;
     }
     &:hover:after {
-        border-color: #2A7D2E;
+        border-color: #115aaf;
     }
 }
 

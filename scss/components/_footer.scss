@@ -1,1 +1,101 @@
 /*============== Footer CSS ================*/
+.footer-area {
+    padding: 70px 0 0;
+    background-color: #EDF7FF;
+}
+
+.footer-logo {
+    margin-top: 60px;
+}
+
+.footer-area h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #031a39;
+}
+
+.single-footer-info {
+    flex-basis: 28%;
+    margin-bottom: 30px;
+}
+
+.single-footer-info.contact-info {
+    flex-basis: 44%;
+}
+
+.single-footer-info.footer-social-icons {
+    padding-left: 25px;
+}
+
+.single-footer-info.quick-links ul li {
+    margin-bottom: 8px;
+}
+
+.single-footer-info.quick-links ul li a {
+    color: #585858;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 5px 10px 5px 0;
+    display: inline-block;
+}
+
+.single-footer-info.contact-info ul li {
+    position: relative;
+    padding-left: 35px;
+    color: #45484c;
+    margin-bottom: 30px;
+}
+
+.single-footer-info.contact-info ul li i {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-size: 24px;
+    width: 24px;
+    text-align: center;
+}
+
+.single-footer-info.contact-info ul li i.fa-envelope {
+    font-size: 20px;
+}
+
+.single-footer-info.contact-info ul li:first-child {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.single-footer-info.footer-social-icons ul li {
+    margin-bottom: 15px;
+}
+
+.single-footer-info.footer-social-icons ul li a {
+    font-size: 13px;
+    color: #0b345e;
+    text-transform: uppercase;
+    display: block;
+    background-color: #fff;
+    line-height: 32px;
+    height: 32px;
+}
+
+.single-footer-info.footer-social-icons ul li a i.fa {
+    width: 38px;
+    background-color: #225E9A;
+    color: #fff;
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.single-footer-info.footer-social-icons ul li a i.fa-google-plus {
+    background-color: #CC3E3E;
+}
+
+.copyright-text {
+    color: #3c3d3d;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 0;
+    border-top: 1px solid #D2DBE2;
+}

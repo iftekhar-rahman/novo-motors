@@ -1,3 +1,92 @@
 /*=============== Header CSS ==================*/
+// .header-area
+.header-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    height: 120px;
+    .site-logo {
+        height: 120px;
+    }
+    .boxed-btn {
+        position: absolute;
+        right: 0px;
+        top: 0;
+        border-radius: 50px;
+        border: 2px solid #fff;
+        padding: 6px 24px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: .3s;
+        &:hover{
+            background-color: #fff;
+            color: #031A39;
+            border-color: #fff;
+        }
+    }
+}
+.top-contact-section {
+    background-color: #031A39;
+    color: #fff;
+    width: 450px;
+    float: right;
+    padding: 12px 0;
+    border-radius: 0 0 15px 15px;
+    .top-social-icons {
+        a {
+            width: 26px;
+            height: 26px;
+            border: 2px solid #fff;
+            border-radius: 50pc;
+            text-align: center;
+            line-height: 24px;
+            margin-left: 5px;
+            &:hover {
+                opacity: .6;
+                color: inherit;
+            }
+        }
+    }
+    .top-phone {
+        a{
+            font-weight: 500;
+            font-size: 18px;
+            position: relative;
+            i {
+                font-size: 22px;
+                margin-right: 5px;
+            }
+            &:hover {
+                opacity: .6;
+                color: inherit;
+            }
+        }
+    }
+}
 
+// .mainmenu 
+.mainmenu {
+    position: relative;
+    margin-top: 15px;
+    ul {
+        margin-right: 182px;
+        li { 
+            display: inline-block;
+            margin-left: 15px;
+            > a {
+                color: #fff;
+                display: block;
+                text-transform: uppercase;
+                font-size: 15px;
+                padding: 8px 15px 4px;
+                border-bottom: 4px solid transparent;
+            }
+            &:hover > a {
+                border-color: #fff;
+            }
+        }
+    }
+}
 
