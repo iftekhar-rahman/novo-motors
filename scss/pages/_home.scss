@@ -85,20 +85,36 @@
             width: 420px;
             height: 12px;
         }
+        .boxed-btn {
+            border-radius: 50px;
+            padding: 15px 50px;
+            text-transform: uppercase;
+            &:hover{
+                background-color: #fff;
+                color: #115AAF;
+            }
+            &:after {
+                background: none;
+            }
+        }
     }
 }
 
 
 
 // service area
-.single-service-item{
+.service-bg{
     background-position: center;
     background-size: cover;
     background-color: #ddd;
     height: 285px;
+    transform: scale(1);
+    transition: .5s;
+}
+.single-service-item{
     margin-bottom: 30px;
-    padding: 25px;
     color: #fff;
+    display: block;
     &:hover {
         color: #fff;
         .service-border {
@@ -108,6 +124,9 @@
             &:after {
                 background-color: #115AAF;
             }
+        }
+        .service-bg {
+            transform: scale(1.1);
         }
     }
     h4 {
@@ -123,6 +142,14 @@
     .service-border {
         border: 2px solid #fff;
         transition: .5s;
+        position: absolute;
+        width: 90%;
+        height: 82%;
+        left: 0;
+        top: 50%;
+        right: 0;
+        margin: 0 auto;
+        transform: translate(0px, -50%);
     }
     .service-text {
         width: 280px;
@@ -148,9 +175,6 @@
 
 // .about-us-area
 .about-us-area{
-    &.section-padding {
-        padding-top: 0;
-    }
     .about-text{
         padding-right: 30px;
     }
@@ -208,16 +232,16 @@
         z-index: -1;
         opacity: .5;
     }
-    &:before {
-        position: absolute;
-        content: "";
-        background-color: #115AAF;
-        left: 0;
-        bottom: -63px;
-        width: 102%;
-        height: 80px;
-        transform: rotate(-1deg);
-    }
+    // &:before {
+    //     position: absolute;
+    //     content: "";
+    //     background-color: #115AAF;
+    //     left: 0;
+    //     bottom: -63px;
+    //     width: 102%;
+    //     height: 80px;
+    //     transform: rotate(-1deg);
+    // }
     .section-title{
         color: #fff;
         padding-left: 0;
@@ -311,9 +335,9 @@
 .call-to-action-area {
     background-color: #115AAF;
     color: #ecf5ff;
-    padding: 40px 0;
+    padding: 72px 0 42px;
     font-size: 17px;
-    overflow-x: hidden;
+    clip-path: polygon(0 0%, 100% 20%, 100% 100%, 0% 100%);
 }
 
 .call-to-action-area h3 {
@@ -328,6 +352,12 @@
     padding: 17px 75px 17px 25px;
     text-transform: uppercase;
     font-size: 17px;
+    &:hover{
+        color: #115AAF;
+    }
+    &:hover:after{
+        background-color: #fff;
+    }
 }
 
 .call-to-action-area .boxed-btn i {

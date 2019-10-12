@@ -4,6 +4,22 @@ jQuery(document).ready(function($){
 
     // $('select').niceSelect();
 
+    // if ($(window).width() < 991) {
+    //     $(".testimonial-area").addClass("parallaxify");
+    // }
+    // else {
+    //     $(".testimonial-area").removeClass("parallaxify");
+    // }
+
+    // Sticky Header with smooth animation
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() >= 300) {
+            $('.header-area').addClass('fixed');
+        } else {
+            $('.header-area').removeClass('fixed');
+        }
+    })
+
     // homepage-slides
 	$(".homepage-slides").owlCarousel({
 		items: 1,
@@ -22,7 +38,29 @@ jQuery(document).ready(function($){
 		dots: true,
         autoplay: false,
         autoHeight: true,
-	});
+    });
+    
+    // Scroll To Top
+    var scrollTop = $(".scrollTop");
+
+    $(window).scroll(function() {
+    var topPos = $(this).scrollTop();
+
+    if (topPos > 100) {
+        $(scrollTop).css("bottom", "55px");
+    } else {
+        $(scrollTop).css("bottom", "-45px");
+    }
+
+    }); // scroll END
+
+    $(scrollTop).click(function() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 800);
+    return false;
+
+    }); // click() scroll top EMD
 
     
 

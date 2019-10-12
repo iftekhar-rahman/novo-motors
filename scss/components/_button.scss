@@ -8,6 +8,20 @@
     @extend %body-font;
     @extend %white-color;
     text-transform: capitalize;
+    position: relative;
+    z-index: 2;
+    &:after {
+        position: absolute;
+        content: "";
+        border-radius: 3px;
+        background-color: #031A39;
+        transition: all .5s ease;
+        height: 100%;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        width: 0;
+    }
     i.fa {
         position: relative;
         bottom: -3px;
@@ -16,6 +30,8 @@
     }
     &:hover {
         @extend %white-color;
-        
+        &:after{
+            width: 100%;
+        }
     }
 }
