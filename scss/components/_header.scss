@@ -194,13 +194,12 @@
             margin: 0px 11px 0 0;
             font-size: 30px;
             background: none;
-            top: 37px;
+            top: 39px;
             right: 15px;
             @include mobile-lg{
                 margin: 0px -5px 0 0;
             }
             @include all-below-mobile-lg{
-                top: 34px;
                 right: 0;
             }
             &:hover{

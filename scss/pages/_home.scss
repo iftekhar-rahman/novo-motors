@@ -82,10 +82,7 @@
         @extend %primary-color;
     }
 }
-.single-slider-item {
-    @extend %white-color;
-    @extend %uppercase;
-    @extend %backgroundimage;
+.homeoage-slides-area, .single-slider-item {
     height: 860px;
     @include mx-tablet{
         height: 600px;
@@ -93,6 +90,11 @@
     @include all-below-mobile-lg{
         height: 450px;
     }
+}
+.single-slider-item {
+    @extend %white-color;
+    @extend %uppercase;
+    @extend %backgroundimage;
     h2 {
         font-size: 87px;
         font-family: $heading-font;

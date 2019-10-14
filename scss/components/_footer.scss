@@ -27,6 +27,18 @@
         @include mx-desktops{
             font-size: 13px;
         }
+        @include all-below-mobile-lg{
+            text-align: center !important;
+        }
+    }
+    .autohq-logo{
+        @include all-below-mobile-lg{
+            text-align: center !important;
+            margin-bottom: 10px;
+        }
+        img{
+            max-width: 100px;
+        }
     }
 }
 
