@@ -11,8 +11,11 @@
 %borderradius50{
 	border-radius: 50%;
 }
-%borderradius5{
-	border-radius: 5px;
+%borderradius50px{
+	border-radius: 50px;
+}
+%borderradius3{
+	border-radius: 3px;
 }
 %sectionpadding{
 	padding: 70px;
@@ -68,6 +71,9 @@
 }
 %basetransition{
 	@include transition(all .3s ease);
+}
+%basetransition2{
+	@include transition(all .5s ease);
 }
 %invisible{
 	visibility: hidden;

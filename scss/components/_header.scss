@@ -1,41 +1,75 @@
 /*=============== Header CSS ==================*/
 // .header-area
 .header-area {
-    position: absolute;
+    @extend %posabsolute;
     left: 0;
     top: 0;
-    width: 100%;
+    @extend %w100;
     z-index: 99;
     height: 120px;
     background-color: #00000090;
+    @include all-below-med{
+        height: 90px;
+    }
+    .container{
+        @include all-below-med{
+            position: relative;
+        }
+    }
     .site-logo {
         height: 120px;
+        @include all-below-med{
+            height: 90px;
+        }
     }
     .boxed-btn {
-        position: absolute;
+        @extend %posabsolute;
         right: 0px;
         top: 0;
-        border-radius: 50px;
+        @extend %borderradius50px;
         border: 2px solid #fff;
         padding: 6px 24px;
         letter-spacing: 1px;
-        text-transform: uppercase;
-        transition: .3s;
+        @extend %uppercase;
+        @extend %basetransition;
         &:hover{
-            background-color: #fff;
-            color: #031A39;
+            @extend %white-bg-color;
+            @extend %secondary-color;
             border-color: #fff;
         }
         &:after {
             background: none;
         }
     }
+    .logo-wrap {
+        @include all-below-med{
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 200px;
+            text-align: center;
+        }
+    }
+    .phone-icon{
+        @extend %posabsolute; 
+        @extend %white-color;
+        top: 25px;
+        left: 15px;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #fff;
+        @extend %borderradius50px;
+        text-align: center;
+        line-height: 41px;
+    }
 }
 .top-contact-section {
-    background-color: #031A39;
-    color: #fff;
+    @extend %secondary-bg-color;
+    @extend %white-color;
     width: 450px;
-    float: right;
     padding: 12px 0;
     border-radius: 0 0 15px 15px;
     .top-social-icons {
@@ -43,8 +77,8 @@
             width: 26px;
             height: 26px;
             border: 2px solid #fff;
-            border-radius: 50pc;
-            text-align: center;
+            @extend %borderradius50px;
+            @extend %textcenter;
             line-height: 24px;
             margin-left: 5px;
             &:hover {
@@ -57,7 +91,7 @@
         a{
             font-weight: 500;
             font-size: 18px;
-            position: relative;
+            @extend %posrelative;
             i {
                 font-size: 22px;
                 margin-right: 5px;
@@ -72,17 +106,17 @@
 
 // .mainmenu 
 .mainmenu {
-    position: relative;
+    @extend %posrelative;
     margin-top: 15px;
     ul {
         margin-right: 200px;
         li { 
-            display: inline-block;
+            @extend %displayinline;
             margin-left: 15px;
             > a {
-                color: #fff;
-                display: block;
-                text-transform: uppercase;
+                @extend %white-color;
+                @extend %displayblock;
+                @extend %uppercase;
                 font-size: 15px;
                 padding: 8px 15px 4px;
                 border-bottom: 4px solid transparent;
@@ -123,6 +157,7 @@
         top: 0;
         width: 100%;
         z-index: 9999;
+        background: #031a39;
     }
 }
 @keyframes slide-down {
@@ -134,4 +169,98 @@
         // opacity: 1;
         transform: translateY(0);
     } 
+}
+
+
+/* =======slicknav_menu======== */
+.slicknav_menu {
+    @extend %displaynone;
+    @include all-below-med(){
+        display: block;
+        background: #ddd;
+        position: fixed;
+        left: 0;
+        top: -10px;
+        right: 0;
+        width: 720px;
+        z-index: 999999999999;
+        margin: 0 auto;
+        height: 0;
+        span.slicknav_menutxt {
+            display: none;
+        }
+        .slicknav_btn {
+            padding: 0;
+            margin: 0px 11px 0 0;
+            font-size: 30px;
+            background: none;
+            top: 37px;
+            right: 15px;
+            @include mobile-lg{
+                margin: 0px -5px 0 0;
+            }
+            @include all-below-mobile-lg{
+                top: 34px;
+                right: 0;
+            }
+            &:hover{
+                background: none;
+            }
+            // @include mx-mobile(){
+            //     // right: 0px;
+            // };
+            // @include mx-mobile-lg(){
+            //     // right: 63px;
+            // };
+        }
+        .slicknav_icon {
+            margin: 0;
+            span {
+                background-color: #fff;
+                border-radius: 0px;
+            }
+        }
+        .slicknav_nav {
+            padding: 10px 0;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 100%;
+            box-shadow: 2px 10px 30px -14px #000;
+            @include all-below-mobile-lg{
+                // top: 90px;
+            }
+            .slicknav_row {
+                padding: 0;
+                a{
+                    padding: 10px 15px;
+                    display: inline-block;
+                }
+            }
+            .slicknav_row{
+                border-radius: 0px;
+                &:hover {
+                    border-radius: 0px;
+                }
+            }
+        }
+        a {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #000;
+            border-radius: 0;
+            &:hover {
+                border-radius: 0;
+            }
+        }
+        
+        
+    }
+    @include mx-mobile-lg(){
+        width: 540px;
+    };
+    @include mx-mobile(){
+        width: 100%;
+    };
 }

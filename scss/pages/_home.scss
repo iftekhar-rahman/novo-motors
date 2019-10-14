@@ -2,24 +2,31 @@
 
 // homeoage-slides-area
 .homeoage-slides-area{
-    overflow: hidden;
-    position: relative;
     &:after {
-        position: absolute;
-        content: "";
-        background-color: #fff;
+        @extend %pseudo;
+        @extend %white-bg-color;
         bottom: -67px;
         left: 0;
         width: 110%;
         height: 100px;
         z-index: 9;
         transform: rotate(-1.7deg);
+        @include all-below-mobile-lg{
+            bottom: -65px;
+            height: 80px;
+        }
     }
     .owl-dots {
-        position: absolute;
+        @extend %posabsolute;
         left: 0;
         bottom: 135px;
         right: 0;
+        @include mx-tablet {
+            bottom: 70px;
+        }
+        @include all-below-mobile-lg{
+            bottom: 41px;
+        }
     }
     .owl-nav div {
         bottom: 135px;
@@ -31,70 +38,156 @@
         font-size: 26px;
         line-height: 30px;
         z-index: 9;
+        @include mx-large-desktops{
+            left: 45%;
+        }
+        @include mx-desktops{
+            left: 44%;
+        }
+        @include all-below-med {
+            left: 42%;
+        }
+        @include mx-tablet {
+            bottom: 70px;
+        }
+        @include all-below-mobile-lg{
+            bottom: 41px;
+            left: 35%;
+        }
+        @include mx-mobile-lg{
+            left: 40%;
+        }
     }
     .owl-nav div.owl-next {
         right: 46.7%;
         left: auto;
+        @include mx-large-desktops{
+            right: 45%;
+        }
+        @include mx-desktops{
+            right: 44%;
+        }
+        @include all-below-med {
+            right: 42%;
+        }
+        @include all-below-mobile-lg{
+            right: 35%;
+        }
+        @include mx-mobile-lg{
+            right: 40%;
+        }
     }
     .owl-nav div:hover {
         background: transparent;
-        color: #115AAF;
+        @extend %primary-color;
     }
 }
 .single-slider-item {
-    color: #fff;
-    text-transform: uppercase;
-    background-position: center;
-    background-size: cover;
-    background-color: #ddd;
+    @extend %white-color;
+    @extend %uppercase;
+    @extend %backgroundimage;
     height: 860px;
+    @include mx-tablet{
+        height: 600px;
+    }
+    @include all-below-mobile-lg{
+        height: 450px;
+    }
     h2 {
         font-size: 87px;
-        font-family: 'Anton', sans-serif;
+        font-family: $heading-font;
         font-weight: 400;
         line-height: 87px;
         margin: 5px 0 10px;
         letter-spacing: 2px;
+        @include all-below-med{
+            font-size: 70px;
+        }
+        @include all-below-mobile-lg{
+            font-size: 50px;
+            line-height: 60px;
+        }
+        @include mx-mobile-lg{
+            font-size: 65px;
+            line-height: 75px;
+        }
     }
     h3 {
         font-size: 50px;
-        font-family: 'Anton', sans-serif;
+        font-family: $heading-font;
         font-weight: 400;
         line-height: 50px;
         margin-bottom: 25px;
         letter-spacing: 2px;
+        @include all-below-med{
+            font-size: 32px;
+        }
+        @include all-below-mobile-lg{
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 1px;
+        }
+        @include mx-mobile-lg{
+            font-size: 24px;
+        }
     }
     p {
         margin: 0 0 0;
     }
     .slider-text {
         margin-top: 320px;
-        position: relative;
+        @extend %posrelative;
         padding-left: 60px;
         padding-top: 50px;
+        @include mx-tablet{
+            margin-top: 160px;
+        }
+        @include all-below-med{
+            padding-left: 30px;
+            padding-top: 30px;
+        }
+        @include all-below-mobile-lg{
+            margin-top: 130px;
+            padding-top: 20px;
+        }
         &:after, &:before {
-            position: absolute;
+            @extend %pseudo;
             left: 0;
             top: 0;
             width: 12px;
-            height: 100%;
-            background-color: #fff;
-            content: "";
+            @extend %h100;
+            @extend %white-bg-color;
+            @include all-below-mobile-lg{
+                width: 8px;
+            }
         }
         &:before {
             width: 420px;
             height: 12px;
+            @include all-below-med{
+                width: 350px;
+            }
+            @include all-below-mobile-lg{
+                height: 8px;
+                width: 220px;
+            }
         }
         .boxed-btn {
-            border-radius: 50px;
+            @extend %borderradius50px;
             padding: 15px 50px;
-            text-transform: uppercase;
+            @extend %uppercase;
             &:hover{
-                background-color: #fff;
-                color: #115AAF;
+                @extend %white-bg-color;
+                @extend %primary-color;
             }
             &:after {
                 background: none;
+            }
+            @include all-below-med{
+                padding: 12px 35px;
+            }
+            @include all-below-mobile-lg{
+                margin-top: 0 !important;
             }
         }
     }
@@ -104,25 +197,23 @@
 
 // service area
 .service-bg{
-    background-position: center;
-    background-size: cover;
-    background-color: #ddd;
+    @extend %backgroundimage;
     height: 285px;
     transform: scale(1);
-    transition: .5s;
+    @extend %basetransition2;
 }
 .single-service-item{
     margin-bottom: 30px;
-    color: #fff;
-    display: block;
+    @extend %white-color;
+    @extend %displayblock;
     &:hover {
-        color: #fff;
+        @extend %white-color;
         .service-border {
-            border-color: #115AAF;
+            border-color: $primary-color;
         }
         .service-text{
             &:after {
-                background-color: #115AAF;
+                @extend %primary-bg-color;
             }
         }
         .service-bg {
@@ -131,18 +222,18 @@
     }
     h4 {
         font-size: 16px;
-        text-align: center;
+        @extend %textcenter;
         margin: 0;
         line-height: 22px;
         span {
-            display: block;
+            @extend %displayblock;
             font-weight: normal;
         }
     }
     .service-border {
         border: 2px solid #fff;
-        transition: .5s;
-        position: absolute;
+        @extend %basetransition2;
+        @extend %posabsolute;
         width: 90%;
         height: 82%;
         left: 0;
@@ -156,17 +247,16 @@
         height: 80px;
         z-index: 2;
         &:after {
-            position: absolute;
-            content: "";
+            @extend %pseudo;
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
+            @extend %w100;
+            @extend %h100;
             background-color: #031A39;
             z-index: -1;
             border-radius: 5px;
             opacity: .9;
-            transition: .5s;
+            @extend %basetransition2;
         }
     }
 }
@@ -180,22 +270,38 @@
     }
     .about-image-wrap {
         max-width: 460px;
-        float: right;
+        @include mx-desktops{
+            max-width: 400px;
+        }
+        @include all-below-med{
+            margin-bottom: 20px;
+            // max-width: 100%;
+            // float: none !important;
+        }
         .about-big-image {
             img {
                 max-width: 460px;
-                border-radius: 3px;
+                @extend %borderradius3;
+                @include mx-desktops{
+                    max-width: 400px;
+                }
+                // @include all-below-med{
+                //     width: 100%;
+                // }
             }
         }
         .about-small-image {
             left: 0;
             top: 50%;
             transform: translate(-48%, -50%);
-            border-radius: 3px;
+            @extend %borderradius3;
             box-shadow: 0px 0px 25px -7px #000;
+            @include mx-desktops{
+                left: 15px;
+            }
             img {
                 max-width: 200px;
-                border-radius: 3px;
+                @extend %borderradius3;
             }
         }
     }
@@ -208,46 +314,45 @@
 
 // testimonial-area
 .testimonial-area {
-    background-position: center;
-    background-size: cover;
-    background-color: #ddd;
+    @extend %backgroundimage;
     background-attachment: fixed;
     height: 660px;
     padding-top: 70px;
     z-index: 2;
+    @include all-below-med{
+        background-attachment: scroll;
+    }
+    @include all-below-mobile-lg{
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+        height: 580px;
+    }
     .owl-stage-outer{
         padding: 60px 0 80px;
     }
     .owl-dots div.active{
-        background-color: #fff;
+        @extend %white-bg-color;
     }
     &:after {
-        position: absolute;
-        content: "";
+        @extend %pseudo;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
+        @extend %h100;
+        @extend %w100;
         background-color: #000;
         z-index: -1;
         opacity: .5;
     }
-    // &:before {
-    //     position: absolute;
-    //     content: "";
-    //     background-color: #115AAF;
-    //     left: 0;
-    //     bottom: -63px;
-    //     width: 102%;
-    //     height: 80px;
-    //     transform: rotate(-1deg);
-    // }
     .section-title{
-        color: #fff;
+        @extend %white-color;
         padding-left: 0;
         margin-bottom: 55px;
+        @include all-below-mobile-lg{
+            margin-bottom: 20px;
+        }
         h2 {
-            color: #fff;
+            @extend %white-color;
         }
         &:after {
             width: 80px;
@@ -257,38 +362,50 @@
             right: 0;
             margin: 0 auto;
             top: auto;
-            background-color: #fff;
+            @extend %white-bg-color;
         }
     }
 }
 .single-testimonial-item {
-    color: #fff;
+    @extend %white-color;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
     padding: 80px 40px 40px 40px;
     font-size: 18px;
     line-height: 1.4rem;
+    @include all-below-mobile-lg{
+        padding: 40px 15px 30px 15px;
+        font-size: 16px;
+        line-height: 1.3rem;
+    }
     p{
         margin: 0;
     }
     .quote-icon {
-        position: absolute;
+        @extend %posabsolute;
         left: 0;
         top: -60px;
         right: 0;
-        color: #fff;
+        @extend %white-color;
         font-size: 50px;
         width: 115px;
         height: 115px;
         border: 3px solid #fff;
         margin: 0 auto;
-        display: block;
+        @extend %displayblock;
         z-index: 999;
-        border-radius: 50%;
+        @extend %borderradius50;
         line-height: 100px;
+        @include all-below-mobile-lg{
+            top: -41px;
+            font-size: 40px;
+            width: 75px;
+            height: 75px;
+            line-height: 73px;
+        }
     }
     .author-name {
-        position: absolute;
+        @extend %posabsolute;
         left: 0;
         bottom: -55px;
         right: 0;
@@ -298,7 +415,7 @@
         }
     }
     .stars-wrap {
-        position: absolute;
+        @extend %posabsolute;
         left: 0;
         bottom: -14px;
         right: 0;
@@ -311,13 +428,12 @@
 }
 .single-testimonial-wrap:after, .single-testimonial-wrap:before,
 .single-testimonial-item:after, .single-testimonial-item:before{
-    position: absolute;
-    content: "";
+    @extend %pseudo;
     left: 0;
     top: 0;
     width: 36%;
     height: 1px;
-    background-color: #fff;
+    @extend %white-bg-color;
 }
 .single-testimonial-wrap:before,
 .single-testimonial-item:before{
@@ -333,36 +449,50 @@
     
 // .call-to-action-area
 .call-to-action-area {
-    background-color: #115AAF;
+    @extend %primary-bg-color;
     color: #ecf5ff;
     padding: 72px 0 42px;
     font-size: 17px;
     clip-path: polygon(0 0%, 100% 20%, 100% 100%, 0% 100%);
-}
-
-.call-to-action-area h3 {
-    font-size: 26px;
-    font-weight: 400;
-    margin: 0 0 5px;
-}
-
-.call-to-action-area .boxed-btn {
-    background-color: #12202D;
-    border: 1px solid #fff;
-    padding: 17px 75px 17px 25px;
-    text-transform: uppercase;
-    font-size: 17px;
-    &:hover{
-        color: #115AAF;
+    @include all-below-med{
+        text-align: center;
+        clip-path: polygon(0 0%, 100% 12%, 100% 100%, 0% 100%);
+    } 
+    @include all-below-mobile-lg{
+        clip-path: polygon(0 0%, 100% 7%, 100% 100%, 0% 100%);
+        padding: 55px 0 35px;
+    } 
+    h3 {
+        font-size: 26px;
+        font-weight: 400;
+        margin: 0 0 5px;
+        @include all-below-med{
+            font-size: 20px;
+        }
     }
-    &:hover:after{
-        background-color: #fff;
+    .float-right{
+        @include all-below-med{
+            float: none !important;
+            margin-top: 15px;
+        } 
     }
-}
-
-.call-to-action-area .boxed-btn i {
-    position: absolute;
-    right: 18px;
-    top: 15px;
-    font-size: 28px;
+    .boxed-btn {
+        @extend %secondary-bg-color;
+        border: 1px solid #fff;
+        padding: 17px 75px 17px 25px;
+        @extend %uppercase;
+        font-size: 17px;
+        i {
+            @extend %posabsolute;
+            right: 18px;
+            top: 15px;
+            font-size: 28px;
+        }
+        &:hover{
+            @extend %primary-color;
+        }
+        &:hover:after{
+            @extend %white-bg-color;
+        }
+    }
 }

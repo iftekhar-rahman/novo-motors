@@ -2,32 +2,61 @@
 .footer-area {
     padding: 70px 0 0;
     background-color: #EDF7FF;
+    @include mx-desktops{
+        font-size: 14px;
+    }
     h4 {
         font-size: 18px;
         font-weight: 600;
-        color: #031a39;
+        @extend %secondary-color;
     }
     .footer-logo {
         margin-top: 60px;
+        @include all-below-med{
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
     }
     .copyright-text {
-        color: #3c3d3d;
-        text-transform: uppercase;
+        @extend %secondary-color;
+        @extend %uppercase;
         font-size: 14px;
         padding: 15px 0;
         border-top: 1px solid #D2DBE2;
+        @include mx-desktops{
+            font-size: 13px;
+        }
     }
 }
 
-
+.footer-contact-info{
+    @include all-below-mobile-lg{
+        display: block !important;
+    }
+}
 .single-footer-info {
     flex-basis: 28%;
     margin-bottom: 30px;
+    @include mx-mobile-lg{
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    @include mx-mobile{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
     &.contact-info {
         flex-basis: 44%;
     }
     &.footer-social-icons {
         padding-left: 25px;
+        @include all-below-mobile-lg{
+            padding-left: 0;
+            padding-right: 35%;
+        }
     }
     &.quick-links {
         ul {
@@ -35,15 +64,18 @@
                 margin-bottom: 8px;
                 a {
                     color: #585858;
-                    text-transform: uppercase;
+                    @extend %uppercase;
                     font-size: 15px;
                     padding: 5px 10px 5px 0;
-                    display: inline-block;
-                    transition: .5s;
+                    @extend %displayinline;
+                    @extend %basetransition2;
+                    @include mx-desktops{
+                        font-size: 13px;
+                    }
                 }
                 &:hover a{
                     padding-left: 5px;
-                    color: #115AAF;
+                    @extend %primary-color;
                 }
             }
         }
@@ -51,7 +83,7 @@
     &.contact-info {
         ul {
             li {
-                position: relative;
+                @extend %posrelative;
                 padding-left: 35px;
                 color: #45484c;
                 margin-bottom: 30px;
@@ -60,12 +92,12 @@
                     font-size: 18px;
                 }
                 i {
-                    position: absolute;
+                    @extend %posabsolute;
+                    @extend %textcenter;
                     left: 0;
                     top: 1px;
                     font-size: 24px;
                     width: 24px;
-                    text-align: center;
                 }
                 i.fa-envelope {
                     font-size: 20px;
@@ -79,23 +111,23 @@
                 margin-bottom: 15px;
                 a {
                     font-size: 13px;
-                    color: #0b345e;
-                    text-transform: uppercase;
-                    display: block;
-                    background-color: #fff;
+                    @extend %uppercase;
+                    @extend %secondary-color;
+                    @extend %displayblock;
+                    @extend %white-bg-color;
                     line-height: 32px;
                     height: 32px;
                     i.fa {
                         width: 38px;
-                        background-color: #225E9A;
-                        color: #fff;
+                        background-color: $facebook-color;
+                        @extend %white-color;
                         line-height: 32px;
-                        text-align: center;
+                        @extend %textcenter;
                         font-size: 16px;
                         margin-right: 10px;
                     }
                     i.fa-google-plus {
-                        background-color: #CC3E3E;
+                        background-color: $google-plus-color;
                     }
                 }
             }

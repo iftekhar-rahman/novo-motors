@@ -90,6 +90,9 @@ textarea {
         span{
             color: #031a39;
         }
+        @include all-below-mobile-lg{
+            font-size: 32px;
+        }
     }
 }
 
