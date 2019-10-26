@@ -1,0 +1,39 @@
+/*==================Contact-css==================*/ 
+
+.map{
+    height: 400px;
+    background: #dddddd;
+}
+
+.single-contact-info {
+    padding-left: 40px;
+    margin-bottom: 30px;
+    a:hover {
+        color: #115AAF;
+    }
+    h3 {
+        font-size: 24px;
+        color: #031a39;
+    }
+    .contact-icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #115aaf;
+        font-size: 30px;
+        i.fa-envelope {
+            font-size: 24px;
+        }
+    }
+}
+
+.form-wrapper {
+    margin-top: 50px;
+    button[type=submit] {
+        border: 0;
+        padding: 10px 50px;
+    }
+    textarea {
+        height: 198px;
+    }
+}

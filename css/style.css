@@ -1101,4 +1101,34 @@ select {
     color: #031a39;
     font-size: 24px; }
 
+/*==================Contact-css==================*/
+.map {
+  height: 400px;
+  background: #dddddd; }
+
+.single-contact-info {
+  padding-left: 40px;
+  margin-bottom: 30px; }
+  .single-contact-info a:hover {
+    color: #115AAF; }
+  .single-contact-info h3 {
+    font-size: 24px;
+    color: #031a39; }
+  .single-contact-info .contact-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #115aaf;
+    font-size: 30px; }
+    .single-contact-info .contact-icon i.fa-envelope {
+      font-size: 24px; }
+
+.form-wrapper {
+  margin-top: 50px; }
+  .form-wrapper button[type=submit] {
+    border: 0;
+    padding: 10px 50px; }
+  .form-wrapper textarea {
+    height: 198px; }
+
 /*# sourceMappingURL=style.css.map */
