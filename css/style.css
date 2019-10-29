@@ -2,40 +2,46 @@
 00. Mixins CSS
 ******************************/
 @import url("https://fonts.googleapis.com/css?family=Anton|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap");
+.form-wrapper button[type=submit] {
+  border: 0; }
+
 .owl-nav div, .single-testimonial-item .quote-icon {
   border-radius: 50%; }
 
-.header-area .boxed-btn, .header-area .phone-icon, .top-contact-section .top-social-icons a, .single-slider-item .slider-text .boxed-btn {
+.header-area .boxed-btn, .header-area .phone-icon, .top-contact-section .top-social-icons a, .single-slider-item .slider-text .boxed-btn, .why-choose-us-area .single-choose-us-item span {
   border-radius: 50px; }
 
 .boxed-btn, .boxed-btn:after, .about-us-area .about-image-wrap .about-big-image img, .about-us-area .about-image-wrap .about-small-image, .about-us-area .about-image-wrap .about-small-image img {
   border-radius: 3px; }
 
-.mainmenu ul li > a, .single-footer-info.footer-social-icons ul li a, .scrollToTop, .single-service-item, .single-service-item h4 span, .single-testimonial-item .quote-icon {
+.mainmenu ul li > a, .single-footer-info.footer-social-icons ul li a, .scrollToTop, .single-service-item, .single-service-item h4 span, .single-testimonial-item .quote-icon, .novomotors-info-area .single-novomotors-info .novo-number, .why-choose-us-area .single-choose-us-item span {
   display: block; }
 
 .slicknav_menu {
   display: none; }
 
-.owl-nav div, .mainmenu ul li, .single-footer-info.quick-links ul li a {
+.owl-nav div, .mainmenu ul li, .single-footer-info.quick-links ul li a, .why-choose-us-area.text-center .section-title {
   display: inline-block; }
 
-.top-contact-section .top-phone a, .mainmenu, .single-footer-info.contact-info ul li, .boxed-btn, .boxed-btn i.fa, .single-slider-item .slider-text {
+.top-contact-section .top-phone a, .mainmenu, .single-footer-info.contact-info ul li, .boxed-btn, .boxed-btn i.fa, .single-slider-item .slider-text, .novomotors-info-area .single-novomotors-info {
   position: relative; }
 
-.owl-nav div, .header-area, .header-area .boxed-btn, .header-area .phone-icon, .single-footer-info.contact-info ul li i, .homeoage-slides-area .owl-dots, .single-service-item .service-border, .single-testimonial-item .quote-icon, .single-testimonial-item .author-name, .single-testimonial-item .stars-wrap, .call-to-action-area .boxed-btn i {
+.owl-nav div, .header-area, .header-area .boxed-btn, .header-area .phone-icon, .single-footer-info.contact-info ul li i, .homeoage-slides-area .owl-dots, .single-service-item .service-border, .single-testimonial-item .quote-icon, .single-testimonial-item .author-name, .single-testimonial-item .stars-wrap, .call-to-action-area .boxed-btn i, .banner-area .banner-title, .novomotors-info-area .single-novomotors-info .novo-icon, .single-contact-info .contact-icon {
   position: absolute; }
 
 .scrollToTop {
   position: fixed; }
 
-.single-slider-item, .service-bg, .testimonial-area {
+.single-slider-item, .service-bg, .testimonial-area, .banner-area {
   background-size: cover;
   background-position: center;
   background-color: #ddd; }
 
+.banner-area {
+  z-index: 2; }
+
 .boxed-btn:after, .homeoage-slides-area:after, .single-slider-item .slider-text:after, .single-slider-item .slider-text:before, .single-service-item .service-text:after, .testimonial-area:after, .single-testimonial-wrap:after, .single-testimonial-wrap:before,
-.single-testimonial-item:after, .single-testimonial-item:before {
+.single-testimonial-item:after, .single-testimonial-item:before, .banner-area:after {
   position: absolute;
   content: ""; }
 
@@ -56,13 +62,13 @@ a, button, img, input, span, .owl-nav div, .header-area .boxed-btn {
 .header-area .boxed-btn, .mainmenu ul li > a, .footer-area .copyright-text, .single-footer-info.quick-links ul li a, .single-footer-info.footer-social-icons ul li a, .single-slider-item, .single-slider-item .slider-text .boxed-btn, .call-to-action-area .boxed-btn {
   text-transform: uppercase; }
 
-.header-area, .boxed-btn:hover:after, .single-service-item .service-text:after, .testimonial-area:after {
+.header-area, .boxed-btn:hover:after, .single-service-item .service-text:after, .testimonial-area:after, .banner-area:after {
   width: 100%; }
 
-.boxed-btn:after, .single-slider-item .slider-text:after, .single-slider-item .slider-text:before, .single-service-item .service-text:after, .testimonial-area:after {
+.boxed-btn:after, .single-slider-item .slider-text:after, .single-slider-item .slider-text:before, .single-service-item .service-text:after, .testimonial-area:after, .banner-area:after {
   height: 100%; }
 
-.owl-nav div, .top-contact-section .top-social-icons a, .single-footer-info.contact-info ul li i, .single-footer-info.footer-social-icons ul li a i.fa, .scrollToTop, .single-service-item h4 {
+.owl-nav div, .top-contact-section .top-social-icons a, .single-footer-info.contact-info ul li i, .single-footer-info.footer-social-icons ul li a i.fa, .scrollToTop, .single-service-item h4, .novomotors-info-area .single-novomotors-info .novo-icon, .why-choose-us-area .single-choose-us-item span {
   text-align: center; }
 
 .owl-nav div, .single-testimonial-item .quote-icon {
@@ -606,10 +612,10 @@ select {
     margin-left: 5px;
     font-size: 20px; }
 
-.single-footer-info.quick-links ul li:hover a, .homeoage-slides-area .owl-nav div:hover, .single-slider-item .slider-text .boxed-btn:hover, .call-to-action-area .boxed-btn:hover {
+.single-footer-info.quick-links ul li:hover a, .homeoage-slides-area .owl-nav div:hover, .single-slider-item .slider-text .boxed-btn:hover, .call-to-action-area .boxed-btn:hover, .why-choose-us-area .single-choose-us-item span, .single-contact-info a:hover, .single-contact-info .contact-icon {
   color: #115aaf; }
 
-.scrollToTop:hover, .boxed-btn, .single-service-item:hover .service-text:after, .call-to-action-area {
+.scrollToTop:hover, .boxed-btn, .single-service-item:hover .service-text:after, .call-to-action-area, .novomotors-info-area, .why-choose-us-area .single-choose-us-item:hover span {
   background-color: #115aaf; }
 
 .header-area .boxed-btn:hover, .footer-area h4, .footer-area .copyright-text, .single-footer-info.footer-social-icons ul li a {
@@ -618,14 +624,14 @@ select {
 .top-contact-section, .boxed-btn:after, .call-to-action-area .boxed-btn {
   background-color: #031a39; }
 
-.header-area .phone-icon, .top-contact-section, .mainmenu ul li > a, .single-footer-info.footer-social-icons ul li a i.fa, .scrollToTop, .scrollToTop:hover, .boxed-btn, .boxed-btn:hover, .single-slider-item, .single-service-item, .single-service-item:hover, .testimonial-area .section-title, .testimonial-area .section-title h2, .single-testimonial-item, .single-testimonial-item .quote-icon {
+.header-area .phone-icon, .top-contact-section, .mainmenu ul li > a, .single-footer-info.footer-social-icons ul li a i.fa, .scrollToTop, .scrollToTop:hover, .boxed-btn, .boxed-btn:hover, .single-slider-item, .single-service-item, .single-service-item:hover, .testimonial-area .section-title, .testimonial-area .section-title h2, .single-testimonial-item, .single-testimonial-item .quote-icon, .banner-area .banner-title, .novomotors-info-area, .why-choose-us-area .single-choose-us-item:hover span {
   color: #ffffff; }
 
 .header-area .boxed-btn:hover, .single-footer-info.footer-social-icons ul li a, .homeoage-slides-area:after, .single-slider-item .slider-text:after, .single-slider-item .slider-text:before, .single-slider-item .slider-text .boxed-btn:hover, .testimonial-area .owl-dots div.active, .testimonial-area .section-title:after, .single-testimonial-wrap:after, .single-testimonial-wrap:before,
 .single-testimonial-item:after, .single-testimonial-item:before, .call-to-action-area .boxed-btn:hover:after {
   background-color: #ffffff; }
 
-.scrollToTop {
+.scrollToTop, .banner-area:after {
   background-color: #000000; }
 
 /*================Home Page CSS===============*/
@@ -1015,57 +1021,53 @@ select {
 
 /*=========about-css==============*/
 .banner-area {
-  background-color: #ddd;
-  background-position: center;
-  background-size: cover;
-  height: 450px;
-  z-index: 2; }
+  height: 450px; }
+  @media (max-width: 991px) {
+    .banner-area {
+      height: 350px; } }
   .banner-area:after {
-    position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    content: "";
     z-index: -1;
     opacity: .5; }
   .banner-area .banner-title {
-    position: absolute;
     left: 15px;
-    top: 220px;
-    color: #fff; }
+    top: 220px; }
+    @media (max-width: 991px) {
+      .banner-area .banner-title {
+        top: 158px; } }
     .banner-area .banner-title h2 {
       font-size: 50px; }
+      @media (max-width: 991px) {
+        .banner-area .banner-title h2 {
+          font-size: 40px; } }
     .banner-area .banner-title i {
       margin: 0 10px; }
   .banner-area.section-padding {
     padding-top: 70px; }
 
-.novomotors-info-area {
-  background-color: #115aaf;
-  color: #fff; }
-  .novomotors-info-area .single-novomotors-info {
-    position: relative;
-    padding-right: 75px;
-    font-size: 18px; }
-    .novomotors-info-area .single-novomotors-info .novo-icon {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      border: 1px solid #fff;
-      text-align: center;
-      line-height: 59px;
-      right: 0;
-      top: 0;
-      font-size: 20px; }
-    .novomotors-info-area .single-novomotors-info .novo-number {
-      display: block;
-      font-size: 30px;
-      margin-bottom: 15px; }
+@media (max-width: 991px) {
+  .welcome-area img {
+    margin-bottom: 20px; } }
 
-.why-choose-us-area.text-center .section-title {
-  display: inline-block; }
+.novomotors-info-area .single-novomotors-info {
+  padding-right: 75px;
+  font-size: 18px; }
+  @media (max-width: 991px) {
+    .novomotors-info-area .single-novomotors-info {
+      margin-bottom: 30px;
+      font-size: 16px; } }
+  .novomotors-info-area .single-novomotors-info .novo-icon {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    line-height: 59px;
+    right: 0;
+    top: 0;
+    font-size: 20px; }
+  .novomotors-info-area .single-novomotors-info .novo-number {
+    font-size: 30px;
+    margin-bottom: 15px; }
 
 .why-choose-us-area.text-center .single-choose-us-item span {
   margin: 0 auto;
@@ -1077,26 +1079,19 @@ select {
   -o-transition: all .5s ease;
   transition: all .5s ease; }
   .why-choose-us-area .single-choose-us-item span {
-    text-align: center;
-    display: block;
     width: 100px;
     height: 100px;
-    border: 2px solid #115AAF;
-    border-radius: 50px;
+    border: 2px solid #115aaf;
     font-size: 30px;
     line-height: 93px;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
-    transition: all .5s ease;
-    color: #115AAF; }
+    transition: all .5s ease; }
   .why-choose-us-area .single-choose-us-item .section-title {
     margin-bottom: 40px; }
   .why-choose-us-area .single-choose-us-item:hover {
     -webkit-box-shadow: 0px 0px 24px -16px #000;
     box-shadow: 0px 0px 24px -16px #000; }
-    .why-choose-us-area .single-choose-us-item:hover span {
-      background-color: #115AAF;
-      color: #fff; }
   .why-choose-us-area .single-choose-us-item h3 {
     color: #031a39;
     font-size: 24px; }
@@ -1105,20 +1100,19 @@ select {
 .map {
   height: 400px;
   background: #dddddd; }
+  @media (max-width: 991px) {
+    .map {
+      height: 350px; } }
 
 .single-contact-info {
   padding-left: 40px;
   margin-bottom: 30px; }
-  .single-contact-info a:hover {
-    color: #115AAF; }
   .single-contact-info h3 {
     font-size: 24px;
     color: #031a39; }
   .single-contact-info .contact-icon {
-    position: absolute;
     left: 0;
     top: 0;
-    color: #115aaf;
     font-size: 30px; }
     .single-contact-info .contact-icon i.fa-envelope {
       font-size: 24px; }
@@ -1126,7 +1120,6 @@ select {
 .form-wrapper {
   margin-top: 50px; }
   .form-wrapper button[type=submit] {
-    border: 0;
     padding: 10px 50px; }
   .form-wrapper textarea {
     height: 198px; }
